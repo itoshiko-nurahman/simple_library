@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Simple Book Library</h1>
+    </header>
+    <div class="show-book"></div>
+
+    <!-- Book form  -->
+    <div class="form-box" style="display: none">
+      <h2>Add Book</h2>
+      <form id="form" action="#">
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="title"
+          required
+        />
+        <input
+          type="text"
+          name="author"
+          id="author"
+          placeholder="author"
+          required
+        />
+        <input
+          type="number"
+          name="pages"
+          id="pages"
+          placeholder="pages"
+          required
+        />
+        <div class="read-option">
+          <p>Do you done reading?</p>
+          <select name="read" id="read">
+            <option value="true">Done</option>
+            <option value="" selected>Not Read Yet</option>
+          </select>
+        </div>
+        <button class="btn" type="submit" id="form-btn">Submit</button>
+      </form>
+    </div>
+
+    <!-- Button to show the form -->
+    <button id="show-form-btn" class="btn">Add Book</button>
+  </body>
+</html>

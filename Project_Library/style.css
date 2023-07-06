@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --red: #fc2424;
+  --green: #03c061;
+  --blue: #0020ad;
+  --gray: #d9eafd;
+  --black: #333333;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  background-color: var(--black);
+  margin: 0;
+  padding: 0;
+  height: 13vh;
+  width: 100%;
+  position: sticky;
+  margin-bottom: 2rem;
+}
+
+header > h1 {
+  margin: 0;
+  color: var(--gray);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.show-book {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.book {
+  display: inline-block;
+  background-color: var(--black);
+  padding: 2rem;
+  padding-top: 1rem;
+  border-radius: 12px;
+  color: var(--gray);
+  transition: ease 0.5s;
+  z-index: 1;
+}
+
+.book > h1 {
+  margin-bottom: 2rem;
+}
+
+.book:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(
+    135deg,
+    rgba(108, 99, 255, 0.8) 0%,
+    rgba(165, 107, 255, 1) 100%
+  );
+}
+
+.book-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray);
+  width: 40vw;
+  height: 60vh;
+  border-radius: 20px;
+  padding: 2rem;
+  color: var(--black);
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  outline: none;
+  border: none;
+  border-bottom: 2px var(--black) solid;
+  background-color: var(--gray);
+  margin-top: 1rem;
+}
+
+select {
+  margin-top: 0;
+}
+
+.read-option {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.read-option > p {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+span {
+  color: var(--black);
+}
+
+.btn {
+  height: 3rem;
+  width: 10rem;
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#show-form-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+#delete-btn {
+  background-color: var(--red);
+}
+
+form > .btn {
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
